@@ -17,9 +17,10 @@ def load_documents(docs_dir: Path = DOCS_DIR) -> List[Dict]:
     """
     Load documents from .txt files in the documents/ folder.
 
-    Each file starts with a header written by fetch_sources.py:
+    Each document's identity comes from its filename, not from any URL. The
+    file may start with a header written by fetch_sources.py:
         Title: <title>
-        Source: <url>
+        Source: <url>      <- kept for citation only, not used for identity
         <blank line>
         <body text...>
 
@@ -27,7 +28,7 @@ def load_documents(docs_dir: Path = DOCS_DIR) -> List[Dict]:
         docs_dir: Folder containing the .txt source files
 
     Returns:
-        List of dicts: {text, source_url, title, date_fetched, source_type}
+        List of dicts: {text, title, doc_id, source_url, date_loaded, source_type}
     """
     documents = []
 
@@ -39,10 +40,11 @@ def load_documents(docs_dir: Path = DOCS_DIR) -> List[Dict]:
             if text and len(text.strip()) > 100:  # Only keep if substantial
                 documents.append({
                     'text': text,
-                    'source_url': source_url,
                     'title': title,
-                    'date_fetched': datetime.now().isoformat(),
-                    'source_type': 'reddit' if 'reddit.com' in source_url else 'blog'
+                    'doc_id': path.stem,
+                    'source_url': source_url,
+                    'date_loaded': datetime.now().isoformat(),
+                    'source_type': 'reddit' if 'reddit' in path.stem else 'blog',
                 })
                 print(f"✓ Loaded: {path.name} ({len(text)} chars)")
             else:
@@ -55,9 +57,12 @@ def load_documents(docs_dir: Path = DOCS_DIR) -> List[Dict]:
 
 
 def _parse_document(raw: str, path: Path) -> tuple:
-    """Split a saved .txt file into (title, source_url, body)."""
+    """Strip the header off a saved .txt file, returning (title, source_url, body).
+
+    The Source: URL is kept for citation, but identity comes from the filename.
+    """
     title = path.stem
-    source_url = path.stem
+    source_url = ''
     body = raw
 
     # Header lines precede the first blank line.
@@ -105,20 +110,21 @@ def clean_text(text: str) -> str:
     return text
 
 
-def chunk_document(text: str, source_url: str, chunk_size: int = 300,
+def chunk_document(text: str, doc_id: str, chunk_size: int = 300,
                   overlap: int = 50, metadata: Dict = None) -> List[Dict]:
     """
     Split document into chunks with overlap, respecting sentence boundaries.
 
     Args:
         text: Document text
-        source_url: Source URL for metadata
+        doc_id: Document identifier (the .txt filename stem), used as the
+            chunk_id prefix
         chunk_size: Target chunk size in characters (default 300)
         overlap: Overlap between chunks in characters (default 50)
         metadata: Extra fields (e.g. title, source_type) merged into every chunk
 
     Returns:
-        List of dicts: {text, source_url, chunk_id, **metadata}
+        List of dicts: {text, chunk_id, **metadata}
     """
     metadata = metadata or {}
 
@@ -132,8 +138,7 @@ def chunk_document(text: str, source_url: str, chunk_size: int = 300,
     def make_chunk(chunk_text: str) -> Dict:
         return {
             'text': chunk_text,
-            'source_url': source_url,
-            'chunk_id': f"{_url_to_id(source_url)}_{chunk_id}",
+            'chunk_id': f"{doc_id}_{chunk_id}",
             **metadata,
         }
 
@@ -171,18 +176,6 @@ def chunk_document(text: str, source_url: str, chunk_size: int = 300,
     return chunks
 
 
-def _url_to_id(url: str) -> str:
-    """Convert URL to a short, collision-free ID prefix."""
-    # Strip protocol and any trailing slash so URLs that differ only by a
-    # trailing '/' don't collapse to the same id.
-    url = url.replace('https://', '').replace('http://', '').rstrip('/')
-    parts = [p for p in url.split('/') if p]
-    domain = parts[0].replace('.com', '').replace('www.', '') if parts else 'doc'
-    # Last path segment is the most distinctive part (e.g. the thread slug/id).
-    thread_id = parts[-1][:12] if len(parts) > 1 else ''
-    return f"{domain}_{thread_id}".lower()
-
-
 def ingest_and_chunk(docs_dir: Path = DOCS_DIR, chunk_size: int = 300,
                      overlap: int = 50) -> List[Dict]:
     """
@@ -196,7 +189,7 @@ def ingest_and_chunk(docs_dir: Path = DOCS_DIR, chunk_size: int = 300,
         overlap: Overlap in characters
 
     Returns:
-        List of chunks: {text, source_url, chunk_id, title, source_type}
+        List of chunks: {text, chunk_id, title, source_url, source_type}
     """
     print(f"\n📄 Loading documents from {docs_dir}...\n")
     documents = load_documents(docs_dir)
@@ -206,8 +199,12 @@ def ingest_and_chunk(docs_dir: Path = DOCS_DIR, chunk_size: int = 300,
 
     for doc in documents:
         chunks = chunk_document(
-            doc['text'], doc['source_url'], chunk_size, overlap,
-            metadata={'title': doc['title'], 'source_type': doc['source_type']},
+            doc['text'], doc['doc_id'], chunk_size, overlap,
+            metadata={
+                'title': doc['title'],
+                'source_url': doc['source_url'],  # citation only
+                'source_type': doc['source_type'],
+            },
         )
         all_chunks.extend(chunks)
         print(f"  {doc['title']}: {len(chunks)} chunks")
