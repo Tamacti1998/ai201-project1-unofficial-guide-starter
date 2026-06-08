@@ -1,0 +1,21 @@
+Title: SOS: Organic Chemistry!
+Source: https://scs.illinois.edu/student-ambassadors-blog/sos-organic-chemistry-0
+
+Image
+By Alayna Johnson, 2018-2019 SCS Student Advising Leader
+As an avid reddit user, I recently came across a post on r/AskReddit that asked
+“What is the hardest class you took in college?
+” The top answer? Organic chemistry, with 156 upvotes. The comments section is filled with other users adding their own organic horror stories, one even going so far as to say organic chemistry made them switch majors from chemistry to art! So what makes this course so challenging and how can you avoid some of the major pitfalls?
+If you were to ask a student the hardest part about organic chemistry, they would probably respond along the lines of “it’s all memorization!”. They do have a point: the successful organic chemist is required to keep many different reactions organized in their mind. However, I would venture to say this isn’t actually what makes it difficult. After all, history, biology, and anatomy also require copious amounts of memorization but don’t have the nefarious reputation that organic does. Instead, organic chemistry requires you to build a strong chemical intuition and successfully generalize specific examples to complex reactions. In other words, it’s not enough to memorize a reaction, you have to have a deep understanding of how it works, when to use it, and its limitations.
+Now that I’ve scared you, let’s move on to some tips on how to succeed in these challenging and rewarding courses:
+Push those arrows!
+“Arrow pushing" is a common way of representing how electrons move during organic reactions. It’s probably a little bit different than anything you’ve encountered before and will be confusing at first, but you’ll be a pro with practice. After a new reaction is presented in class, take the time to learn the mechanism (arrow pushing) behind it. This makes organic seem less like a black box where molecules pop out mythically changed. An understanding of arrow pushing will take you further than memorizing 100 reactions.
+Keep up.
+Organic chemistry builds and it builds fast. Your responsibility as a student is to synthesize all of the information, identify concepts that are difficult for you, and correct them. I highly, highly recommend re-writing and re-thinking your notes after every lecture. This forces you to stay on top of the material and identify any issues early on.
+Don’t approach reactions in isolation.
+So you’ve just learned that pyridinium chlorochromate (PCC) oxidizes primary alcohols to aldehydes. You’ve even learned the mechanism behind the reaction. Great, but not so fast. After you become familiar with a new reaction, the next step is to integrate it into your organic toolbox and become familiar with how to use it in conjunction with other reactions. Ask yourself: When will I know to use PCC? When will I know
+not
+to use PCC? What kind of unique transformations can it perform? What reactions are likely to come before and after PCC in a long synthesis problem? How is it better/worse than similar reactions such as the Jones Oxidation?
+One other piece of good news: the organic chemistry faculty on this campus are phenomenal. If at any point in the semester, you feel yourself falling behind, immediately schedule an appointment with your professor, TA, and/or academic advisor. Most will be more than happy to help clear up any fuzzy concepts for you. The important thing is to do this as soon as you’re feeling confused, not right before a big exam! If you’re more comfortable getting help from your peers, the American Chemical Society Illinois chapter offers free tutoring in organic chemistry (and other subjects) every week. To find out more, visit
+here
+.
