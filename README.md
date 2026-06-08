@@ -18,8 +18,7 @@
 
 **Domain Summary:**
 
-This unofficial guide compiles college students' authentic experiences and attitudes toward organic chemistry, a notoriously difficult course that shapes many students' career decisions. Student perspectives on why organic chemistry is hard, how to succeed, and what to expect are currently scattered across Reddit threads, university blogs, and forums—making it difficult for incoming students to find candid, peer-to-peer advice in one place. This guide consolidates these voices to give prospective and current students a realistic, honest view of the course and practical strategies from those who've lived through it.
-
+This guide consolidates authentic student experiences and attitudes about organic chemistry from scattered Reddit threads, blogs, and forums into one resource. Student perspectives on why the course is difficult, how to succeed, and what to realistically expect are currently hard for incoming students to find, making this peer-to-peer knowledge valuable and otherwise inaccessible.
 ---
 
 ## Document Sources
@@ -29,7 +28,7 @@ This unofficial guide compiles college students' authentic experiences and attit
      Aim for variety — sources that together cover different subtopics or perspectives. -->
 
 | # | Title | Source | URL/Path |
-|---|-------|-------------|---------|-------------|
+|---|-------|-------------|---------|
 | 1 | In your experience, why do undergraduate students find organic chemistry a very hard subject? | Reddit | https://www.reddit.com/r/OrganicChemistry/comments/1thnyk4/in_your_experience_why_do_undergraduate_students/ |
 | 2 | Is organic chemistry that hard? | Reddit | https://www.reddit.com/r/ChemicalEngineering/comments/1lz3h9s |
 | 3 | Hardest Chemistry Subjects for Chemistry Grads | Reddit | https://www.reddit.com/r/chemistry/comments/1smu4rj/hardest_chemistry_subjects_for_chemistry_grads/ |

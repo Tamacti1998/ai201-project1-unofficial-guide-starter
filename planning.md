@@ -14,7 +14,8 @@
 
 **Domain Summary:**
 
-This unofficial guide compiles college students' authentic experiences and attitudes toward organic chemistry, a notoriously difficult course that shapes many students' career decisions. Student perspectives on why organic chemistry is hard, how to succeed, and what to expect are currently scattered across Reddit threads, university blogs, and forums—making it difficult for incoming students to find candid, peer-to-peer advice in one place. This guide consolidates these voices to give prospective and current students a realistic, honest view of the course and practical strategies from those who've lived through it.
+This guide consolidates authentic student experiences and attitudes about organic chemistry from scattered Reddit threads, blogs, and forums into one resource. Student perspectives on why the course is difficult, how to succeed, and what to realistically expect are currently hard for incoming students to find, making this peer-to-peer knowledge valuable and otherwise inaccessible.
+
 ---
 
 ## Documents
