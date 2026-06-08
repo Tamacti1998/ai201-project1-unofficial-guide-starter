@@ -2,7 +2,7 @@
 
 ## Sources
 
-| # | Title | Source Type | URL/Path | Description |
+| # | Title | Source | URL/Path | Description |
 |---|-------|-------------|---------|-------------|
 | 1 | In your experience, why do undergraduate students find organic chemistry a very hard subject? | Reddit | https://www.reddit.com/r/OrganicChemistry/comments/1thnyk4/in_your_experience_why_do_undergraduate_students/ | Students, instructors, and chemists discuss why organic chemistry is difficult, highlighting issues such as memorization, spatial reasoning, and ineffective teaching methods |
 | 2 | Is organic chemistry that hard? | Reddit | https://www.reddit.com/r/ChemicalEngineering/comments/1lz3h9s | Students share whether organic chemistry deserves its reputation as one of the hardest college courses and compare it with other engineering classes |
