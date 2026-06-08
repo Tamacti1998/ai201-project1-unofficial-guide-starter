@@ -52,10 +52,13 @@ This guide consolidates authentic student experiences and attitudes about organi
      - What your final chunk count was across all documents -->
 
 **Chunk size:**
+300 characters
 
 **Overlap:**
+50 characters
 
 **Why these choices fit your documents:**
+Reddit comments and blog paragraphs naturally fit this range. Large enough to capture a complete thought, small enough that one chunk = one student voice. Low overlap — unlike technical docs, student opinions don't need repetition at boundaries. Overlap just prevents semantic breaks.
 
 **Final chunk count:**
 
@@ -70,8 +73,10 @@ This guide consolidates authentic student experiences and attitudes about organi
      latency, and local vs. API-hosted. -->
 
 **Model used:**
+all-mpnet-base-v2 (via sentence-transformers). Better context length (384 tokens vs 256 for all-MiniLM-L6-v2) and superior semantic understanding for nuanced student opinions.
 
 **Production tradeoff reflection:**
+If cost were unlimited, I'd use a domain-specialized embedding model fine-tuned on education forums + Reddit discussions. Tradeoffs: context length (for capturing full Reddit threads) > latency (users expect answers in <2s) > multilingual support (not needed for US college students). Domain-specific accuracy is critical — "hard," "struggle," "stressful" have specific meanings in college chemistry contexts that general embeddings miss.
 
 ---
 
