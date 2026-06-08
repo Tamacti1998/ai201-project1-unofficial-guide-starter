@@ -52,11 +52,14 @@ This guide consolidates authentic student experiences and attitudes about organi
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:**
+**Chunk size:** 
+300 characters
 
-**Overlap:**
+**Overlap:** 
+50 characters
 
 **Reasoning:**
+Reddit comments and blog paragraphs naturally fit this range. Large enough to capture a complete thought, small enough that one chunk = one student voice. Low overlap — unlike technical docs, student opinions don't need repetition at boundaries. Overlap just prevents semantic breaks.
 
 ---
 
@@ -68,11 +71,14 @@ This guide consolidates authentic student experiences and attitudes about organi
      would you weigh in choosing a different embedding model — context length, multilingual
      support, accuracy on domain-specific text, latency? -->
 
-**Embedding model:**
+**Embedding model:** 
+all-mpnet-base-v2 (via sentence-transformers). Better context length (384 tokens vs 256 for all-MiniLM-L6-v2) and superior semantic understanding for nuanced student opinions.
 
-**Top-k:**
+**Top-k:** 
+5 chunks. Student opinion/experience domains benefit from multiple diverse perspectives rather than one "best match." 5 chunks allows the generator to synthesize different viewpoints.
 
 **Production tradeoff reflection:**
+If cost were unlimited, I'd use a domain-specialized embedding model fine-tuned on education forums + Reddit discussions. Tradeoffs: context length (for capturing full Reddit threads) > latency (users expect answers in <2s) > multilingual support (not needed for US college students). Domain-specific accuracy is critical — "hard," "struggle," "stressful" have specific meanings in college chemistry contexts that general embeddings miss.
 
 ---
 
@@ -85,11 +91,11 @@ This guide consolidates authentic student experiences and attitudes about organi
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | What specific reasons do students mention for finding organic chemistry difficult? | Mentions at least 2-3 of: difficulty visualizing 3D molecular structures, memorization-heavy content, ineffective teaching methods, abstract concepts, spatial reasoning challenges, fast pacing |
+| 2 | What study strategies or tips do successful students recommend for organic chemistry? | Mentions: using molecular model kits, practice problems, seeking better instructors/tutoring, conceptual understanding over memorization, study groups, consistent practice, 3D visualization tools |
+| 3 | How do students' expectations before taking organic chemistry compare to their actual experience? | Acknowledges: students often expect a "weed-out" course and fear failure; some are pleasantly surprised when they understand concepts; others find the reality matches or exceeds their fears depending on teaching quality |
+| 4 | What emotional or psychological challenges do students face in organic chemistry? | Mentions: anxiety about exams, frustration with problem-solving, fear of failing, stress from high workload, imposter syndrome, discouragement from peers' struggles |
+| 5 | Do students consider organic chemistry harder than other chemistry subjects or college courses? | Provides balanced perspective: some say it's harder than General Chemistry; debates whether it's harder than physical/quantum chemistry; varies by individual; professor matters more than course itself |
 
 ---
 
@@ -99,9 +105,11 @@ This guide consolidates authentic student experiences and attitudes about organi
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-1.
+1. **Conflicting or contradictory student advice** — Reddit and student blogs contain opposing viewpoints: some say "organic chemistry is all memorization," others say "memorization is useless, focus on mechanisms." Without explicit source attribution, users won't know if they're hearing from a struggling student or someone who succeeded. The system needs to present multiple perspectives transparently, not conflate them into one answer. *Mitigation:* Include source info in responses (e.g., "A pre-med student said..." vs "A chemistry major said...").
 
-2.
+2. **Noisy chunks from Reddit threads** — Reddit threads are full of tangents, jokes, emotional venting ("This class made me want to quit"), and off-topic discussion. A 300-character chunk might capture a rant rather than actionable advice. Additionally, chunk boundaries might split narrative advice across multiple chunks (e.g., "I struggled because X. I tried Y. It worked.") losing the causal connection. *Mitigation:* Filter out obviously emotional/non-substantive chunks during post-processing; test chunking strategy on real Reddit threads to ensure key advice isn't fragmented.
+
+3. **Off-topic retrieval on chemistry-adjacent queries** — A query like "Is chemistry hard?" or "Hardest college courses" could retrieve chunks about organic chemistry difficulty, general chemistry, physics, or calculus. Without strong domain boundaries, the system might return irrelevant comparisons. *Mitigation:* Explicitly test queries with semantic drift (general difficulty questions vs organic-chemistry-specific) and refine embedding model if needed.
 
 ---
 
@@ -112,6 +120,37 @@ This guide consolidates authentic student experiences and attitudes about organi
      Label each stage with the tool or library you're using.
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
+
+```mermaid
+graph LR
+    A["📄 Document Ingestion<br/>(requests + BeautifulSoup<br/>Manual Reddit/Blog URLs)"] 
+    B["✂️ Chunking<br/>(Custom Python<br/>300 char chunks<br/>50 char overlap)"]
+    C["🧠 Embedding + Vector Store<br/>(sentence-transformers<br/>all-mpnet-base-v2<br/>ChromaDB)"]
+    D["🔍 Retrieval<br/>(ChromaDB Query<br/>top-k=5<br/>Semantic Search)"]
+    E["✍️ Generation<br/>(Groq API<br/>llama-3.3-70b<br/>Response synthesis)"]
+    F["👤 User<br/>(Gradio UI)"]
+    
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F -.Query.-> D
+    
+    style A fill:#e1f5ff
+    style B fill:#f3e5f5
+    style C fill:#e8f5e9
+    style D fill:#fff3e0
+    style E fill:#fce4ec
+    style F fill:#f1f8e9
+```
+
+**Pipeline Summary:**
+1. **Ingestion:** Fetch HTML from Reddit threads, university blogs, forums using requests/BeautifulSoup
+2. **Chunking:** Split documents into 300-character semantic chunks with 50-char overlap; preserve Reddit comment/blog paragraph boundaries
+3. **Embedding:** Use sentence-transformers (all-mpnet-base-v2) to convert chunks to 768-dim vectors; store in ChromaDB with metadata (source, date)
+4. **Retrieval:** On user query, embed query with same model; retrieve 5 most similar chunks using cosine similarity
+5. **Generation:** Pass retrieved chunks + query to Groq LLM with system prompt for synthesis; return response via Gradio interface
 
 ---
 
@@ -129,6 +168,58 @@ This guide consolidates authentic student experiences and attitudes about organi
 
 **Milestone 3 — Ingestion and chunking:**
 
+**Tool:** GitHub Copilot
+
+**Input:** 
+- Chunking Strategy section (300 char chunks, 50 char overlap, semantic paragraph boundaries)
+- Sample Reddit/blog URLs (3–5 real examples)
+- Requirements: preserve Reddit comment structure, don't split student voices mid-thought
+
+**Expected Output:** 
+- `load_documents(urls)` function: fetches HTML from URLs, parses text, returns list of dicts with `{text, source, date}`
+- `chunk_document(text, source)` function: splits into 300-char chunks with 50-char overlap, returns list of dicts with `{text, source_url, chunk_id}`
+
+**Verification:**
+- Test on 2 real Reddit threads; verify chunks are 280–320 characters (±10%)
+- Manually inspect 5 chunks; confirm no student voices are fragmented mid-sentence
+- Verify overlap: confirm last 50 chars of chunk N appear at start of chunk N+1
+
+---
+
 **Milestone 4 — Embedding and retrieval:**
 
+**Tool:** Claude (for complex reasoning about vector stores)
+
+**Input:**
+- Retrieval Approach section (all-mpnet-base-v2, top-k=5, cosine similarity)
+- Architecture diagram (ChromaDB stage)
+- sentence-transformers + ChromaDB documentation links
+
+**Expected Output:**
+- `embed_and_store(chunks)` function: converts chunks to 768-dim vectors using all-mpnet-base-v2, stores in ChromaDB with metadata (source, date)
+- `retrieve(query, k=5)` function: embeds user query, retrieves 5 most similar chunks by cosine distance, returns sorted by relevance
+
+**Verification:**
+- Embed 10 test chunks; verify output shape is (10, 768)
+- Query "Why is organic chemistry hard?"; manually verify top-5 results are semantically relevant
+- Test off-topic query ("How to cook pasta?"); confirm retrieval returns low-relevance chunks (high distance scores)
+
+---
+
 **Milestone 5 — Generation and interface:**
+
+**Tool:** GitHub Copilot
+
+**Input:**
+- Architecture diagram (Generation stage)
+- Evaluation Plan section (5 test questions + expected answers)
+- Groq API documentation + system prompt for grounding
+
+**Expected Output:**
+- `generate_response(query, chunks)` function: formats chunks with source attribution, calls Groq LLM with system prompt, returns synthesized answer
+- Gradio interface: text input for query, text output for response, example questions pre-loaded
+
+**Verification:**
+- Run 5 test questions from Evaluation Plan against live system
+- Compare responses to expected answers: should mention ≥2–3 key points, cite perspectives accurately
+- Manually verify system doesn't hallucinate information beyond retrieved chunks
