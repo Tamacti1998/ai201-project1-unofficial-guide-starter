@@ -1,8 +1,6 @@
 Title: SOS: Organic Chemistry!
 Source: https://scs.illinois.edu/student-ambassadors-blog/sos-organic-chemistry-0
 
-Image
-By Alayna Johnson, 2018-2019 SCS Student Advising Leader
 As an avid reddit user, I recently came across a post on r/AskReddit that asked
 “What is the hardest class you took in college?
 ” The top answer? Organic chemistry, with 156 upvotes. The comments section is filled with other users adding their own organic horror stories, one even going so far as to say organic chemistry made them switch majors from chemistry to art! So what makes this course so challenging and how can you avoid some of the major pitfalls?
@@ -17,5 +15,3 @@ So you’ve just learned that pyridinium chlorochromate (PCC) oxidizes primary a
 not
 to use PCC? What kind of unique transformations can it perform? What reactions are likely to come before and after PCC in a long synthesis problem? How is it better/worse than similar reactions such as the Jones Oxidation?
 One other piece of good news: the organic chemistry faculty on this campus are phenomenal. If at any point in the semester, you feel yourself falling behind, immediately schedule an appointment with your professor, TA, and/or academic advisor. Most will be more than happy to help clear up any fuzzy concepts for you. The important thing is to do this as soon as you’re feeling confused, not right before a big exam! If you’re more comfortable getting help from your peers, the American Chemical Society Illinois chapter offers free tutoring in organic chemistry (and other subjects) every week. To find out more, visit
-here
-.

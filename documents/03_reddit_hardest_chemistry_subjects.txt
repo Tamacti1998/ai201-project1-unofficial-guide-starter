@@ -2,57 +2,31 @@ Title: Hardest Chemistry Subjects for Chemistry Grads
 Source: https://www.reddit.com/r/chemistry/comments/1smu4rj/hardest_chemistry_subjects_for_chemistry_grads/
 
 It really depends on the person. Knew guys that were great at p chem and inorganic that couldn’t grasp a thing about organic. I knew the organic wiz kids that couldnt math to save their lives.
-
 I feel like students who don't have trouble with p-chem have the dual skill set of (1) being good at math, and (2) being willing to suspend disbelief and work with the framework you've been given, even though it makes no sense.
-
 Yep, I was a double major chem and math. Quantum mechanics makes a lot of sense if you’ve taken a bit of upper level pure math. I wouldn’t really describe myself as “good at math,” though. Was not good at the lower level stuff, but I am very good at abstraction and proofs. The way I think about quantum mechanics is as if it’s just a fake math world. Like yeah I guess I can contend with the fact that electrons (at least one) exist, but to me they are just a mathematical object that follow mathematical rules. You can say that an electron is a mobius strip and that makes perfect sense to me. If you try and apply your knowledge of the world you can see to the quantum realm, it will never make sense.
-
 Great at inorganic but sucked at organic?! I would have understood if the person was great at P Chem yet sucked at both organic and inorg.
-
 I’m not sure why that’s so surprising. I’ve run into multiple of those people
-
 This is me. P Chem, inorganic, even quantum I enjoy and could understand them to the extent that you can (looking at you quantum chemistry), but I did bad in organic. I think it was partly that I didn’t really enjoy it and so didn’t really try; I was definitely always complaining about the lack of math.
-
 Biochem was my hardest because I just hated memorizing shit. Felt boring after smashing through Organic. Pchem was technically harder but I enjoyed it a lot more so it doesn’t feel as hard.
-
 Quantum chemistry
-
 Anyone disagreeing better be sharing some seriously arcane coursework. People below saying Biochem II is hard bc memorizing a few metabolic pathways haven't dealt with the math-heavy hell of Group Cluster Theory calcs. I would even say introductory Bra Ket stuff is harder and that's day one of intro to QC. Quantum chem is the course that made me realize the enormous gulf between the top 1% academically and the top .001%. The reason O-chem and Biochem have such a reputation for difficulty is for a few reasons: O-chem, in particular O-chem II, is quite likely to be the most difficult course a student has taken thus far. Usually taken sophomore year and in many schools it has the difficulty of a 4000 level course with the grading rigor of a 2000 level course. In short: a filter class. A lot of non-chem majors (nursing, pre-med, bio) have to take those courses. They may not have as much direct interest in the subjects as straight chem/biochem majors. Not many pre-meds are touching quantum chem. O-chem is somewhat unusual in that it requires a lot of memorization AND a lot of procedural practice. It's like a calc course and a history course had a baby. Biochem on the other hand just has a fuckton of memorization. They're hard fucking classes. There's just even worse stuff waiting down the line :) Graduates get to deal with Advanced Organjc Chem. It's the worst of both worlds, but IMO one of the most beautiful fields of chemistry. It seriously ties together so many principles and I don't think any other subject helped my overall understanding of chemistry as much. This is when you start applying the concepts from physical and quantum chemistry to organic molecules.
-
 Graduate QM was insane, until it clicked. By the time you get to degenerate perturbation theory, either you get it, or your brain is molten tapioca.
-
 QM  must first reduce your brain to its constituent parts before it can be reformed to contain uncertainty.
-
 10/10 quantum memer over here
-
 My brain...was molten tapioca unfortunately...
-
 My professor said if you think you understand quantum chemistry then you don't understand quantum chemistry. I only did a little of it, not a dedicated course, but actually did very well on that exam! Don't think I really understood it though.
-
 I am a published theoretical/synthetic chemist. It is quantum chem/theoretical chem by a mile. Every other general chemistry feild makes sense intuitively to some degree. I still need to do a 3 day deep dive into quantum mechanics fundamentals and all the notation quirks before I can work meaningfully on someone else's manuscript. All of my colleagues are physics/math PhDs and they are different animals. I will say... I do prefer it to a few cell bio courses i took a long time ago. That shit was just pure memorization with no rhyme or reason.
-
 And I am a theoretical chemist, because thats the only part that makes sense to me!
-
 A tragic case of Schrodinger's Stockholm syndrome/j
-
 I agree, quantum is the hardest. But also agree I’d prefer it over several other chem/bio courses. I worked my ass off in Pchem, but I found it really cool and while “enjoy” might be too strong it was definitely satisfying to learn.
-
 [removed]
-
 Don't mention stat mech. I felt like i was punch drunk after that final. It was a required class to be a part of one of my PI's groups and i never used a bit of it.
-
 Quantum is way easier than the point groups in inorganic
-
 The issue is not point groups and group theory but it is that it's the inorganic folks teaching it despite them being totally oblivious to how it works. Same thing with pericyclic reactions in organic chemistry. If you are in computational chemistry I encourage you to go study point groups and group theory from someone who knows what they're talking about. It's actually not hard at all, you need the character table and exactly one equation and you can simplify a lot of chemistry problems really by a lot. Plus if you're in comp chem you will need the stuff at some point anyway, it reduces your computing time by up to like 90%.
-
 We let inorganic have those, just so they have something sort of 'hard' I'd be happy to take them back into p-chem
-
 Maybe they did mean pchem, but what I would call a quantum chemistry course does even more group theory. It was an infamous class at my PhD, but one of the advanced quantum courses said "Today is Friday. This is Cotton. If you don't know it front to back, read it before class Monday. The end of Cotton is our beginning point." And there's also molecular spectroscopy which while it's non standard enough that curriculum will differ, point group theory completely fails for rotational and high resolution spectroscopy (point group theory is concerned with the groups of vibronic coordinates only, and vibronic coordinates do not consider rotation or the symmetry of the wavefunction) so you learn different and even harder group theory.
-
 Oh man,  point groups and group theory and spectroscopy in general just clicked for me.  On the other hand- I had a rough time with Physical Organic, taught by Andrew Streitweiser.
-
 Quantum chemistry is just undergraduate math with Dirac notation. It’s pretty easy. Diagonalize 3x3 matrices, solve some PDEs that have analytic solutions since the 1700s, etc.
-
 I am a QC person and actually yes, I would claim in a heartbeat that anything biochemistry related I ever had to do was magnitudes more annoying to me that QC ever could be. 
 I am an incredibly lazy person. So I don't like memorising stuff. In biochem you can't do anything with at least some memorising because:
 - with these large molecules, most systematic naming is out the window.
@@ -60,287 +34,147 @@ I am an incredibly lazy person. So I don't like memorising stuff. In biochem you
 - there's no such thing as a rule, it's more like a trend which is true every Thursday to Saturday when Jupiter and Mars align. (but this applies to all chemistry except some physical chemistry maybe) So I faint at the pure thought of memorising all that stuff. While in QC, I do the derivation two times from the textbook and then I can mostly do it myself. I get that this would be very different for someone who doesn't like math, because then it's the same memorising game but minus the obvious visuals of biochemistry. 
 Also, all my QC professors up to now were lovely old men who give you the impression they're more happy about you passing with a good grade than you are so I concede I'm very privileged in that regard. 
 Finally I think there's no such thing as a simple field. You have to put in work to get good in any field and once you do, of course those you did not invest your time in seem harder because you're naturally not as good in them. It's a very personal question, so I'd be surprised if everybody agreed on it :)
-
 I am so happy that I understand everything about the parts of quantum that you just listed, that’s some big validation haha
-
 Well you added 3 orders of magnitude
-
 I actually liked advanced organic for this reason exactly. When you like something, you have a tendency to do well at it.
-
 Group theory. There.
-
 I should have disqualified Quantum Chem from the discussion. Dear God, I had to fail that class twice.
-
 It’s applied physics… which is pretty much all chemistry at the heart of it
-
 IMO we only decided QCD was physics and not chemistry because chemistry was getting too full.
-
 Once you start digging in to it you start to realize chemistry and physics feel the same-ish at the higher levels. But this makes sense. Physics is measuring forces and those forces dictate a lot of chemistry. This is just my fairly low level understanding of it as an undergrad who aced physical/thermo chem because I considered it ‘fun’
-
 It's more so about the level of abstraction you are working with. If you're doing organic synthesis or med chem, you're not going to derive everything from the fundamental forces. The systems are just too complex. You need to rely on the emergent structure which exist in the domain that matters.
-
 100% It’s why real results matter more than what aspen can predict
-
 Statistical mechanics. Very proud of the 20 I got on the final.
-
 Honestly, psychedelics helped a lot when it came to Quantum Chem.  It's a lot easier to understand quantum degeneracy when you can visualize something in multiple (states) at the same time, or to comprehend the cloud-like probability distribution of something when you can see it dispersed across a given volume and interacting with the next particle's cloud.  Not so helpful with associated equations, but great for getting a grasp on the concepts.
-
 When I took this class, I read the ENTIRE textbook front to back, and I needed two additional textbooks to help me actually understand it. And even then I only did moderately well in that class. I would have given anything to be back in organic chem.
-
 It doesn’t get better in grad school, I promise.
-
 Came here just to say this. Mainly because of the linear algebra aspect of it. I never took lin alg in undergrad so I got messed up in grad school when I had to use it for quantum when I never did before
-
 Physical chemistry 2 was what they called it at my university. Basically quantum mechanics for chemists. The only thing I did really well with was group theory, and that came from my spatial reasoning skills and the fact that inorganic chemistry had taught me about it a couple weeks before we did it in P chem.
-
 I started as a physics major - quantum chemistry was not that bad.   But I was unusually well versed in quantum for a chemist. Grad level organic synthesis or spectroscopy were the ones for me.  Once I finally got it they were amazing, but I spent a long time lost (and feeling like I’d never figure it out).
-
 I think the reason you see different answers is because it completely depends on your personal strengths. PChem might be harder for people who struggled with physics and calculus or generally don’t prefer the analytical, mathematical work. OChem is harder for people who aren’t very visual a lot of the time because of the way it’s taught using visual representation of mechanisms
-
 Yeah, Pchem and OChem will sort you into the “numbers person” vs “visual person” categories. I was definitely a numbers guy.
-
 The second half of Pchem (where Schrödinger et al show up) has made me come to terms that I'm a molecular biologist, not a biochemist.
-
 lol if understanding quantum were the requirement for being a biochemist I think we’d have like 1/100 of the biochemists we have now.
-
 Exactly. I did better in pchem and quantum than I did in organic. But my Chem degree is combined with a physics degree. Had to retake ochem twice, got grades >B on all my pchem courses
-
 Quantum chemistry was brutal
-
 Would taking linear algebra separately before quantum chemistry give me a leg up? Or should I just do the maths section of the red book?
-
 Yes easily. My lukewarm take is that quantum chemistry isn't bad in and of itself but chem majors just simply aren't required to take the math courses that are necessary to understand what it is you are actually doing. Trying to learn wtf an eigenvalue is or understanding why some particular matrix representation of an operator is hermitian is a lot to ask of someone with no background in linear algebra. I did fine in the class but that was because I was independently interested in math and knew substantially more than the other students in my cohort.
-
 100%
-
 God bless my pchem professor who had the gifted talent of conceptualizing the most abstract shit.
-
 I'm not a chemist, my degree is in maths, but as someone who has taken lin alg and QM courses, having some lin alg would almost certainly help.
-
 What else should I take apart from linear algebra in math for Quant Chem? Would it be enough for undergrad level?
-
 Again, I did a general QM course so I'm unfamiliar with the specifics of QChem, but if I had to think of anything else, some familiarity with diff eqs would help. If you see a first course in ODEs/PDEs which covers stuff like the wave equation and Poisson's equation, then approaching the Schrödinger equation will be less daunting. I would also guess that some coding skills might help depending on your course. 'Methods' books like Arfken usually cover those topics (and a lot of others!) without too much fluff.
-
 At GT I would describe it more has a hard requirement than a leg up.
-
 GT?
-
 Georgia Institute of Technology
-
 Oh ok. I thought that was a specific course or something
-
 Yes. If you know 3rd year level linear algebra and PDEs, quantum is pretty easy.
-
 I don't know any PDE, and I'm just starting with LA with Sheldon Axler's book. Wish me luck 🫥☠️
-
 Elementary Differential Equations and Boundary Value Problems  by Boyce et al. was the textbook I remember.  I won't say it's a great book but it is the right level for preparing for quantum.  Fourier series, Hermite polynomials, LaGrange's method, ... are the sort of thing that make introductory quantum mechanics easy.  You don't even have to be good at this stuff, because the handful of special cases in quantum chemistry are easy to remember, you just have to not be so terrified your brain stops working when you see this stuff.  The biggest issue for most chemists seeing quantum for the first time isn't that the math itself is hard, but that it looks so daunting they give up.
-
 The first chapter of Shankar's QM book introduces most of the math you need to know.  You could check that out from the library and copy just that chapter.
-
 O-chem for me. I have poor spatial reasoning skills and cannot hold or rotate images in my head well at all. To this day, I have to color code every single carbon to tell if it’s an enantiomer or the same compound or to determine chiral etc. I suspect I have aphantasia but who knows. P chem was easiest for me. I love calculus and physics and was originally a physics major but switched when I realized how much outer space I had to pretend to care about to major in it.
-
 Same here! I love Pchem, chemistry is so unique, it’s so funny someone commented quantum chem is the hardest, and inside I’m like “that’s my favourite” haha
-
 Im not a chemist, and I have aphantasia but yeah, chirality wasn't easy
-
 Organic Chemistry for me! This is coming from someone who thrived in Thermodynamics. Reaction mechanisms and visualization of those mechanisms wasn't my strong suit
-
 Were you good at Math during your pre-college years?
-
 If I am being honest, I was not which is the irony, but I did well in these courses and liked them. I studied quite hard to keep up with the content and that paid off luckily. Also seems like the content in these courses came more naturally to me, than visualization based reaction mechanisms in Ochem. Enjoying the content helped with studying as well I would say.
-
 I also enjoyed Physical Chem!
-
 Most undergrad chemistry students following a normal 4-year university sequence for a Bachelor's degree find P-Chem the most difficult, simply because of the math involved.  Partial differential equations, etc. A lot of people switch from a regular Chem major to a Bio major and a chem minor during their senior years, which is when most people take P-chem.  When I finished my bachelor's in chemistry, only about 2% of the people taking Intro to Chem as freshman finished the whole thing.  Most ended up with Chem as a minor if they didn't leave the department entirely for something else. I thought O-Chem 1&2 were walks in the park, but O-chem does involve something to annoy everyone.  Extensive nomenclature, check.  Calculations, check.  Memorization, check.  Abstract thinking, check.  3-D Geometry, check.  Puzzle-solving, check.  Analytical lab work, check.  Even a little bit of history.  Lots of variety.
-
 I found P-Chem particularly challenging, but I think that's because the professor spoke German and PhD, and it was an undergrad course that was supposed to be taught in English.  I credit a math-heavy thermodynamics (physics) course and the PDE (math) course that I took because I'm a glutton for punishment for being able to pass that exam.
-
 [deleted]
-
 An "A" in my class was anything above 50%
-
 It was inorganic chemistry for me!
-
 Ditto. It broke my brain with the weird bonding because I took it before p-chem, which was only a tiny bit easier because I’d taken linear algebra prior to quantum.
-
 Graduate level organic, but that was totally the instructor. He was a researcher and resented having the class, and it was clear every time we met.
-
 I assume the guy is smart (like intellectually gifted) but sucks ass at teaching because he can't grasp the learning capabilities of the students?
-
 Probably brilliant, but didn’t prepare at all for class and just used his research to try to explain reactions. A postdoc sat in that semester, just in case he ever had to teach a class, and was at least as confused as anyone else. He’d draw out a reaction to show a substitution, then mention the reaction actually occurred on the back of the molecule. Very helpful.
-
 Michael Gelb?
-
 No, but I doubt it was a unique trait!
-
 Anyone who says anything but Quantum Mechanics has never taken Quantum Mechanics. Except for Darren. Darren had some goddamn innate ability to learn Quantum Mechanics. Like it was easy for him. Got 90s on all the exams. 34 years later I still think about Darren and my hatred for him has not abated in any way. Fuck you Darren. I’m kidding. Darren was actually a cool dude. Still though. Fuck you Darren. I remember vividly after finishing some proof, which I completely understood all the calculus, the prof saying “and that’s why the hydrogen wave equation is like peanut butter over bread” then motioning with his hand to mimic the unevenness of said peanut butter.  Still no idea what he was on about. Give me my C- and get me the fuck out of here.
-
 Is Darren a prodigy in your class by any chance?
-
 P chem SHEEEE
-
 I agree with those that say quantum, because that's the correct answer. And I know the question is about chemistry grads, which I think the op is referring to graduate students? It's not very clear as OPs post history tends to asking a lot of questions not related to chemistry. But we had a difficult time in P-Chem undergrad for different reasons than the subject matter. First, I went to undergrad at a small private school that had a very good chemistry program, but no graduate program so undergrad classes were taught exclusively by full professors which has its advantages. Unfortunately, first semester thermo was taught by the chemistry chair who was a very good professor, but a complete jerk. Although he taught the subject well, he absolutely belittled the students for asking questions he thought were stupid. And he had absolutely no qualms in pointing that out immediately, loudly, and specifically with the intention of belittling and humiliating the questioner. The effect was, after about 2 weeks, nobody dared to ask a question in his class. Perhaps that was his goal, I don't know and we never really figured out. If we had questions, we generally met as a class outside to discuss the subject matter. It wasn't a particularly difficult class, it was definitely hard, but the fact that he was so unapproachable and absolutely horrible to deal with made the class far harder than it needed to be. Second semester junior year was kinetics, which was our first introduction to quantum. That class was taught by a wonderful professor, the nicest guy in the world, but, he was just a bad teacher. He would forget subjects within the class, and then have to go back and repeat it based on things he forgot to tell us. It was maddening, but he was very approachable and he actually was willing to spend a lot of time outside of the class with groups of people where we could just review and ask questions. The subject matter was definitely difficult for an undergrad, but we felt like we had to take the class twice during the semester just to get through it.
-
 The reason for my lack of post history is that my account is new, courtesy of my previous one being banned permanently. The reason I'm asking is that I just finished graduating from my Chem undergrad and am currently in the middle of grad school. Other than P-Chem, do you recall ever struggling in other chem subjects?
-
 The thermodynamics.
-
 I always thought the second semester of biochem was the most grueling. The most intensive memorization course I have ever taken. Things like memorizing the entire TCA cycle. It  made organic II look like a bunny course. The p-chems weren't that bad. Quantum p-chem could easily be the most difficult course, but mine was watered down to allow most people to pass.
-
 But atleast with biochem, the lab and macroscopic nature of the field makes it fun and intuitive. You literally cannot visualise Quantum Chem without expertise in math and comp sci., which most chemists lack. Which is why I'm trying to take as much linear algebra and differential equations before quant chem as possible. I hope a math minor helps.
-
 Memorization of those pathways is such a waste of time.  Speaking as a biochemist
-
 Physical chemistry - specifically infrared spectroscopy and crystallography theory
-
 Inorganic without a doubt. Group theory is the devils work.
-
 Analytical Chemistry was TOUGH!
-
 Same for me. I feel dumb seeing it barely being mentioned, but Analytical Chem is a serious drag.
-
 Conceptually: quantum. I never got slightly close to developing a true "understanding" of it in undergrad. I got good grades but that was purely bc i was good at the math part. Passing courses: ochem. I did the classic "just memorize stuff without grasping the concept" mistake and failed ochem I and II on my first try. Then it clicked and now i have a phd in organic chemistry
-
 Crystallography, learnt enough to pass the exam but never truly understood
-
 physical chemistry. a lot of the theory behind analysis methods relies on understanding quantum chemistry. it’s also calculus-heavy, which many people find difficult. derivations of formulas requires you to apply the quantum framework and calculus to analyze observable phenomena
-
 Environmental chemistry. I passed but did cry before my midterm.
-
 PChem, specifically Quantum Chemistry. I still don't know how I passed that class, and I'm still not entirely sure what any of it actually meant...
-
 I got a D, and I think it was only bc the teacher took pity on me. The only chem class that I didn’t get a B or better in. I can remember taking the final, looking around the room, seeing the other 6 students all working, and thinking “heh, imagine I don’t get to walk at graduation with these friends next month bc of this bullshit” lmao
-
 Please watch https://youtube.com/shorts/Wzc0rCniHag?is=4HkNx4IsiaHx7n4C The key to quantum mechanics is to realize it doesn’t mean anything. It’s the math the happens to describe the microscopic behavior of the universe, but it’s just math.
-
 I did both chemistry and chemical engineering and I have to say engineering was considerably harder, especially the more advanced transport phenomena BS but in chemistry itself advanced inorganic was pretty tough, took all the difficult things from quantum chemistry and then added another layer on top which was a bit of work. I found all organic and biochemistry pretty doable, advanced topics in material science was a bit rough when entering the world of organic semiconductors and then applying all the quantum and (in)organic basis etc. Graduate wise, statistical field theory was one hell of a subject lol, stat mech adjacent courses are definitely my favorite tho.
-
 Quantum Chemistry humbled tf outta me
-
 Quant was difficult, but I just didn't gel with Inorganic.
-
 Not everyone complaining about quantum… I loved quantum! But absolutely despised thermo.
-
 You found quantum easier than thermo!!!?? God Deym!
-
 I think the classes that had a crappy professor were the hardest. I had a really mean-spirited Organic II professor back in the day and I didn't like the class at all and I didn't do well in it, but then I took Advanced Organic Chem with a good professor and it was a fantastic class, I looked forward to going to that class every day.
-
 I once had a P-:Chem Professor who taught thermodynamics to grad students tell me that he didn’t understand thermodynamics until he studied it three times starting. The P-chem Professor who taught quantum mechanics countered that no one understands quantum not even the physics department.
-
 organic but
 my PhD was. PChem
-
 Going from doing a full physics degree to taking a Quantum Chem course in my final undergrad semester, I'd say it's only difficult since most chemistry students simply haven't done enough of the math to be at that level yet. Most chem degrees are structured in such a way that it minimizes math where possible which just ends up fucking any chemistry student going into it.
-
 I found Organic Chemistry Laboratory very taxing. Being pressured to complete an experiment from sample preparation to reaction and to isolation and verification within 3-4 hours on my own while lining up to weigh my samples and working in a hot, humid day was not much doable. I could come in knowing my pre-lab reports well, but often commit a mistake that would prevent me from completing the experiment even if I attempt to be fast. Also, many people in MSE field also struggle with Polymer Chemistry in 4th year because you gotta be well-versed in both physics (random coil model, stat-thermo) and OChem (polymerization, solubility). It only became doable for me because I read about it for years before taking it as a class
-
 as a chemist i had to say that completely agree with organic chem is hardest from all.
-
 Literally especially countless name reaction reagents rearrangements intermediates.....ugghh I can't memorise all at once.
-
 I have no idea how one can intuitively understand quantum chemistry without a good basis in linear algebra lol
-
 It's not required in my chem degree. Praying for the chem undergrads with non mathematical minors lol. But I have a math minor and will take LA this sem, so was just curious. I'm doing Sheldon Axler's textbook in LA, I hope that's sufficient. What else should I take in math to ease into quant chem?
-
 Synthesis chemistry
-
 General chemistry as well as inorganic are more formula-driven physical chemistry is heavily mathematical and organic i believe is having to memorize a million reactions and their mechanisms with a billion exception every chapter 
 I would say that organic has a heavier workload but requires much less '' intelligence " or critical thinking skills than the other types of chem (there for orgo is by far the most annoying and time consuming )
-
 Organic chem would have placed as first for me because there's just so much stuff to remember. Physical chem wasn't easy but you could play about with the math a little and remind yourself what you're supposed to be doing to an educated guess in an exam situation. BUT. In the last year of my undergrad, my uni added computational chemistry to the syllabus which was completely new to all of us and still being taught at final year level, basically. Trial by fire. So that wins.
-
 StatMech! Year 2 undergrad was brutal.
-
 Statistical Thermodynamics Was the best of times and the worst of times.
-
 Instrumental Analysis was a pain in the ass
-
 Thermodynamics was hard for me
-
 I found Organic chem and Biochem difficult. Quantum was quite difficult as well.
-
 Experimental physical chemistry was the hardest. There is a reason I’m a theorist. The professor and I made a deal that he’d give me a B and I’d never set foot in a chemistry lab again. The second worst was the last quarter of organic on carbohydrate chemistry because it’s all mindless memorization. I took the full grad pchem coursework as an undergraduate because that was my thing, so unlike everybody else here, it was fun and easy. I was also a math major so that part wasn’t an issue.
-
 Organic is basically its own language and 3 semesters compressed into 2.. Its much harder than anything else I came across. Even advanced analytical and inorganic was tough but less condensed.
-
 Im pretty sure I got a B in quantum so it wasn't that bad... (the curve was like 23% is an A rofl)
-
 Physical Chemistry (including quantum chem) can go to hell. Those classes destroyed me.
-
 I had about two weeks where I really understood the equations in quantum. And it’s gone
-
 organic is the hardest chem course for non chem majors. bio majors struggle with it because they can’t memorize their way through it like they can with their bio courses
-
 I generally found organic quite easy except for synthesis using advanced stereo selective techniques. Chiral auxiliaries, asymmetric induction etc And then the obvious answer, quantum and statistical thermodynamics. 3rd year stuff was ok but 4th year no. Having to work with matrices and multi variable differential equations didn’t help
-
 I guess statistical mechanics
-
 P Chem, but it was because we had an alcoholic professor and the class was right after lunch.  We essentially took P Chem as a self learning course.
-
 Statistical mechanics in grad school was the hardest for me.
-
 Pchem. Ochem is cake.
-
 Physical chemistry or quantum chemistry.
-
 I thought Org chem III was bad, but then I took biomolecular chemistry. It was this weird mix between fairly straight forward biochemistry and just insane biochem/org chem combination on steroids. Once you have to figure out the sugar and peptide synthesis with protective groups and how each and every reactant can do something to some part of your ever growing molecule... It was the worst case of "exceptions to the rule" that I've encountered and you really had to be able to keep track of every reactive group and the possible interactions. I also think the math heavy chem courses are difficult, but that is more so due to the complex math than the chemistry involved.
-
 From what I've taken, biochem. It's just pure memorization, you can't even use intuition like with organic. Of what I have not taken but have witnessed, probably quantum or computational.
-
 Biochemistry by a long shot. I gravitated towards organic and analytical with a weird love of p-chem as well. Physical Organic Chem in grad school went surprisingly well. But that may have been to the misery loves company aspect as there were bout 6 of suffering together who would take turns for sitting in office hourse and report back to the rest of us struggle bussing through problems in the TA break room.
-
 Literally only group theory. In advanced inorganic chem 2, a C- was about 29% overall grade. Quantum chem was easy if u studied. Group theory was disgusting
-
 stat thermo
-
 PChem is the gate keeper class for a Chemistry degree. Organic Chemistry involves a great deal of memorization. Physical Chemistry is advanced calculus with a twist.
-
 Statistical Thermodynamics
-
 I ended up not needing to major or minor in it, but the  analytical chemistry lab damn near did me in, for a variety of reasons. I just suck at following directions from a sheet, but I'll retain for a long time if I see someone else do it first. When I did gen chem 2 this was easy because we chose groups of four for the semester and so my group going first gave me time to observe them so I'd know what to do when it was my turn to do a run of whatever experiment we were running. Analytical was solo, so I had to change my approach by reading the procedure multiple times, and then rewriting it in my own words multiple times, until I had enough of an idea of what I would need to do. We were on a bit of a timer so it was stressful but thankfully the TAs were understanding and patient with me. Aside from that, it was the first chemistry class I took where accuracy mattered. Previous chem labs I/my groups were able to handwave off-results typically by including an error analysis section in our lab report where we explained what we did wrong and how that would shift the number away from the true result in the way our results showed. Not in Analytical Chemistry, we had to be within +/- I think a half percent of error from the true/accepted value of whatever we were measuring or we did not get a passing grade. There were only two actual lab reports, most labs we just turned in our result, with the math and measurements we took to go with it. I didn't get credit for the first two or three labs, and I shouted something like "LET'S FUCKING GO, I GOT CREDIT!" the first time I got a passing on a lab. I had always jokingly called myself a "spreadsheet chemist", I was smooth on the math and could write a solid report and make the graphs look pretty and all that. I should also note this was the first in person lab that was being hosted after pandemic shutdown restrictions were starting to lift, none of has had done an actual lab in a bit minute, which I think is why our TAs and professor were a bit more patient with my class. English degree btw. I'm sure for people who took higher level chem classes than I had to that Analytical isn't the hardest chem class, but it was a huge wakeup call for me and I had to put more effort into passing that class than I did for any other class I took in college.
-
 Okay as someone who has taken analytical chemistry along with its acs exam, and is about to take their orgo acs exam next week, orgo is worse so far, but honestly I feel like its more to blame on how my one professor has taught it.
-
 P chem was a breeze for me.  Electrochem?  That nearly broke me
-
 Honestly. For me, it was Gen Chem 1 and 2. Pchem, analytical, inorganic, Orgo were a breeze. Gen Chem was a nightmare for me and having to do those equations only in algebraic form when I knew a better way existed also was difficult.
-
 Graduate spectroscopy course HURT me. After being completely obliterated by the theory of building an NMR instrument, we had two projects: one where we had to determine which 2D NMRs we’d try to take ourselves to elucidate a functionalized polyene macrolide (down to which diastereomer it was, with 7 or 8 chiral centers, two of which were quaternary carbons), and another that was interface with computational chem. I got a grace B- and didn’t have to retake it, but I pulled a 60-hour day at the very end to try to get it all figured out. Never did get the structure of that molecule. As an aside, that was the only time I actually fell asleep/blacked out for a few seconds while standing on my bicycle’s pedals as I rode down a hill on my way home. EDIT: when I say which we’d “try” to take ourselves, I mean that we had to actually get the tubes and use the instruments to do it, but I was so shitty at shimming that the NMR tech took pity on me and helped. I never did get the HMBC to work right.
-
 Not chemistry but chemical engineering, here. For me OChem was a cake walk. PChem beat me up, not because of the difficulty, but because I didn't have enough time. In either case, my professors were dicks. In Ochem we were taught the formal IUPAC sanctioned nomenclature. The examination were given exclusively using trivial names. So if you didn't immediately visualize a structure when encountering "cinnamaldehyde," you were out of luck. As for PChem, my professor did a protracted derivation in spherical coordinates. He alternated the meanings of "phi" and "theta." On the examination there was a harmless looking triple integral with the instructions "integrate this." Marked every goddamned exam wrong.
-
 Organic Chemistry is a lot of work, but it isn't hard.  It's mostly memorization. Physical Chemistry = Chemistry + Physics + Calculus is really hard.  Memorizing will not help you.
-
 My achool condensed 1 semester Quantum chem into 10 weeks. I think that was pretty rough. Analytical was also up there, and I cant even pinpoint why it was so grueling for me 
 (Not a grad, but Ive taken all the common chem classes)
-
 Quantum chemistry within a doubt. Doesn’t even compare to anything else.
-
 Físico-Química possui os assuntos mais complexos durante a graduação e maior quantidade de matérias para as provas.
 Já a orgânica é acumulativa, cada tópico que aprende vai ser usado lá na frente. Eu particularmente gostava muito de reações orgânicas em geral.
-
 Statistical thermodynamics
-
 LoL i had my PhD in PChem but my first job was in polymers that didn't require any synthesis. I never had to use either O-Chem or QM, or spectroscopy. Sometimes i wonder why i had to take those courses.
-
 Hardest was a tie between Organic 3, and upper level Phys Chem (don't remember the title, but it wasn't quantum nor computational). Quantum was fun but challenging. I took two different versions and I totally think it depends on the prof. One was open book special topics on understanding all the theories, and the other was very much focused on math. I took an Honours degree so I basically took all the chemistry courses offered at my university, 2003-2007, and I went in to inorganic chemistry for my masters. Edit: Organic 4 was shockingly easier, we switched profs due to a sabbatical, and the old school tyrant I had for organic 1-3 was taking a break.
-
 Aced P-chem but struggled for my life in Orgo 2
-
 They're all different levels of difficulty. Like others said, it depends on the person. I loved organic chemistry 1/2 because it felt like playing with legos at times, and I dedicated a lot of my free time to studying purely because I enjoyed it. Analytical was really tough for me because I was still struggling with some math concepts at the time, but I grew to love it because I got better at math as I studied and learned how to approach problem solving differently. Inorganic as one of the harder courses for me, because my teacher was using it as a prep-course for pchem. So a lot of stuff was hand waved, and went over my head. But I really enjoyed learning about applications of materials there. Point groups and term symbols on the other hand though, took a while.. Instrumental (i dont know how many schools do this) was one of my favorites because it was hands on work with instruments, and learning about how they work, and the math behind it too. Pchem1/2 are some of my favorite courses because (by this time) i was much better with math concepts, and I already learned a ton about chemistry/physics. That's not to say it was easy by any means though. One fuck up in a problem and your whole answer can be screwed up ya know. But I've learned to appreciate a lot more aspects of chemistry that I kind of brushed aside before. Biochem..... I'm very biased here... I don't like biology based stuff, so biochem was a slog. Too much memorization. Everything sounded the same. I got concepts/terms/meanings mixed up all the time. Labs weren't the best. But I still made it out I guess hahaha. - last semester senior on the professional chemistry track at my school, aiming for further education after this.
-
 Organic has that reputation b/c it is the last chem class the pre-med biology majors take.  PChem is hard if your math isn't great.  Inorganic was my worst because you had to just remember a bunch of stuff, and I was lazy.
-
 Inorgo bc I can't mentally visualize symmetry for SHIT
-
 Gen chem lowkey… it was my first ever chem class, freshman year, age 17. So much content, they can’t fully explain anything without opening a can of worms, no clear through line between the various subjects at times. Ochem was easier for me because I’m very good at mentally visualizing and manipulating shapes in 3D and have good pattern recognition. Pchem was the easiest for me because I was a grown adult with good study skills, and I double majored in math (which is really the only challenging part of pchem). Quantum was just applied probability theory + some diffeqs, thermo is just multivariable calculus in a trench coat, kinetics is just easy diffeq, stat mech is just stats, photophysics is probability and kinetics. Anyways, I’m a physical inorganic chemist now lol so I’m expected to understand quantum mechanics and be able to make potions
-
 Subject's professor play a big role too. Our PC professor gave the impression he had no plan, handwriting was bad and he wouldn't upload any slides bcs he didnt want them to be stolen, yeah. The exam was also pretty bad, so the only incentive to really study for it, was if you were planning to enter a PC group for master thesis or phd.
-
 Subject's professor plays a big role too. Our PC professor gave the impression he had no plan, handwriting was bad and he wouldn't upload any slides bcs he didnt want them to be stolen, yeah. The exam was also pretty bad (old questions that you had to learn by heart bcs you would lose points if you for small details) so the only incentive to really study for it, was if you were planning to enter a PC group for master thesis/ phd, or if you just really like PC for some reason
-
 Redox reactions!
-
 Physical Chemistry (Quantum) is the hardest, by far.
-
 To the Chemists of Reddit, which Chemistry subject do you guys find the most difficult during your undergrad days , heck, even during your grad years? A lot of forums cite Organic Chem as the hardest, but upon examining the commenters & respondents, I've noticed that most are pre-med studs taking Bio. Not really a reliable metric since they don't deal much with other advanced Chem subjects. Some cited Physical Chem as the hardest due to the brute force analysis it requires.

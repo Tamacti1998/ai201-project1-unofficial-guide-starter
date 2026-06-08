@@ -13,67 +13,6 @@ Tips on the best ways to prepare
 As a med student myself; who’s had to pick up credit in two separate organic chemistry courses, I know what makes the subject so intimidating!
 But I got through it and so can you.
 Ready to learn more? Let’s go.
-Contents
-show
-1
-Is Organic Chemistry Hard?
-2
-Why is organic chemistry so hard?
-3
-Useful Things To Know Before Beginning An Organic Chemistry Course
-4
-What To Expect From An Organic Chemistry Class
-5
-What Do You Learn In Organic Chemistry?
-6
-What’s Hard About Organic Chemistry
-6.1
-1. Rules
-6.2
-2. Language
-6.3
-3. Sequential
-6.4
-4. Logic not memorization
-7
-What’s Easy About Organic Chemistry
-7.1
-1. Pattern recognition
-7.2
-2. Minimal math
-8
-How Much Time Will You Need To Successfully Pass Organic Chemistry?
-9
-Organic Chemistry Failure Rate
-10
-What’s The Best Way To Prepare (And Make Organic Chemistry Easier)?
-10.1
-YouTube Channels
-10.1.1
-The Organic Chemistry Tutor
-10.1.2
-Eliot Rintoul
-10.1.3
-Leah4sci
-10.2
-Websites
-11
-Is Organic Chemistry Hard in High School?
-12
-Is Organic Chemistry Harder than Medical School?
-13
-Related Questions
-13.1
-Is organic chemistry harder than general chemistry?
-13.2
-Is inorganic chemistry hard?
-13.3
-Is organic chemistry harder than biochemistry?
-13.4
-Is organic chemistry harder than physics?
-14
-Final Thoughts
-Why is organic chemistry so hard?
 Here’s a brief rundown of why organic chemistry is so hard:
 It’s very different to any other basic science course
 It’s dependent mainly on symbols and visualizations (rather than language)
@@ -141,9 +80,6 @@ It’s iterative. You can get easily frustrated learning all the possible reacti
 4. Logic not memorization
 It involves reasoning and logic. Rote-memorization will only get you so far, you’ll need to always be asking why things happen the way they happen.
 You can’t learn organic chemistry in the same way you would biology, for example. Any questions you get are far more dependent on applied logic rather than factual recall.
-Related
-:
-Is Biology Hard? (Beginner Tips!)
 What’s Easy About Organic Chemistry
 1. Pattern recognition
 Once you start learning reactions you’ll notice you can apply similar ones to varying scenarios (reducing the amount of memorization required).
@@ -160,7 +96,6 @@ Your priority should always be on attempting as many questions/exercises as you 
 That way you’ll identify areas you need to work on, topics you’re already familiar with, and benefit from the recall of concepts and facts.
 Getting questions wrong (and learning why your attempt failed) is probably one of the best ways to make good progress in organic chem (
 something evidenced in this paper
-).
 Organic Chemistry Failure Rate
 O-Chem has a notoriously high failure rate compared to many other undergrad courses.
 A dependency on rote memorization (strategies that worked in high school), won’t cut it in O-Chem, according to the academics.
@@ -214,9 +149,3 @@ Unlike many other science subjects, it’s something of an anomaly. There’s is
 Yes, the failure rates are high so don’t make the mistake of thinking you can simply memorize solutions to answers and the thousands of different reactions and mechanisms.
 There’s no better substitution than seeking to ask why and applying that to every question you face.
 Work hard and you can definitely get there!
-If you found this article useful, you may find the following interesting:
-Best Online Organic Chemistry Courses For College Credit
-Will
-Born and raised in the UK, Will went into medicine late (31) after a career in journalism. He’s into football (soccer), learned Spanish after 5 years in Spain, and has had his work published all over the web.
-Read more
-.
