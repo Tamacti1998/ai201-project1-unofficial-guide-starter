@@ -61,6 +61,9 @@ This guide consolidates authentic student experiences and attitudes about organi
 **Reasoning:**
 Reddit comments and blog paragraphs naturally fit this range. Large enough to capture a complete thought, small enough that one chunk = one student voice. Low overlap — unlike technical docs, student opinions don't need repetition at boundaries. Overlap just prevents semantic breaks.
 
+**Update — sentence-boundary snapping (both ends):**
+The 300/50 numbers are unchanged, but chunks now snap to sentence boundaries at *both* the start and the end (not just the end). Inspecting sample chunks showed 93% began mid-word (e.g. "ave an experience…"), which read raggedly even though the core sentence was intact. Snapping the start back to the nearest sentence boundary dropped mid-word starts to ~34% (the rest fall in lists or quote attributions that contain no sentence punctuation to snap to). Because the start snaps *backward*, it adds to the overlap (effective overlap is now ≥50 chars), which raised the total chunk count from 799 to 945 — an acceptable trade for cleaner, self-contained chunks.
+
 ---
 
 ## Retrieval Approach

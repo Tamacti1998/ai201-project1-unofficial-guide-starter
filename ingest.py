@@ -110,10 +110,27 @@ def clean_text(text: str) -> str:
     return text
 
 
+def _sentence_start_at_or_before(text: str, pos: int, floor: int,
+                                 window: int = 100) -> int:
+    """Return the start of the sentence at or before `pos`.
+
+    Scans back up to `window` chars for a '.?!' followed by a space and returns
+    the index just after that space, so a chunk begins cleanly at a sentence
+    start instead of mid-word. Snapping backward (never below `floor`) only adds
+    to the overlap, so it can never drop content. Falls back to `pos` if no
+    boundary is found in the window.
+    """
+    for i in range(pos, max(pos - window, floor), -1):
+        if i >= 2 and text[i - 1] == ' ' and text[i - 2] in '.?!':
+            return i
+    return pos
+
+
 def chunk_document(text: str, doc_id: str, chunk_size: int = 300,
                   overlap: int = 50, metadata: Dict = None) -> List[Dict]:
     """
-    Split document into chunks with overlap, respecting sentence boundaries.
+    Split document into chunks with overlap, snapping both the start and end
+    of each chunk to sentence boundaries.
 
     Args:
         text: Document text
@@ -168,8 +185,10 @@ def chunk_document(text: str, doc_id: str, chunk_size: int = 300,
             chunks.append(make_chunk(chunk_text))
             chunk_id += 1
 
-        # Move start forward, accounting for overlap
-        start = boundary - overlap
+        # Move start forward by (boundary - overlap), then snap back to a
+        # sentence start so the next chunk doesn't begin mid-word. The floor
+        # (start + 1) guarantees forward progress.
+        start = _sentence_start_at_or_before(text, boundary - overlap, start + 1)
         if start <= 0 or start >= len(text):
             break
 
