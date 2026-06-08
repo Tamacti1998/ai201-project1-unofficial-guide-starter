@@ -61,6 +61,7 @@ This guide consolidates authentic student experiences and attitudes about organi
 Reddit comments and blog paragraphs naturally fit this range. Large enough to capture a complete thought, small enough that one chunk = one student voice. Low overlap — unlike technical docs, student opinions don't need repetition at boundaries. Overlap just prevents semantic breaks.
 
 **Final chunk count:**
+799 chunks across 10 cleaned documents
 
 ---
 
