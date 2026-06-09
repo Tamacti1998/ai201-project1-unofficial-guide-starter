@@ -47,7 +47,7 @@ GROUNDING RULES (non-negotiable):
 - Do NOT use any outside or prior knowledge, even if you are confident.
 - If the context does not contain enough information to answer, reply exactly: \
 "I don't have enough information on that." Do not guess.
-- Cite the passages you use inline with their bracketed numbers, e.g. [1], [3].
+- Cite the source(s) you use inline with their bracketed label, e.g. [Reddit], [Blog 2].
 - When sources disagree, present both perspectives instead of merging them.
 - Be concise and specific; quote or paraphrase the actual student/blog voices."""
 
@@ -62,36 +62,60 @@ def _client() -> Groq:
     return Groq(api_key=key)
 
 
-def _format_context(chunks: List[Dict]) -> str:
-    """Render retrieved chunks as numbered passages the model must cite by number."""
+def _source_labels(chunks: List[Dict]) -> Dict[str, str]:
+    """
+    Map each distinct source document to a readable citation label.
+
+    Labels come from the source type (e.g. "Reddit", "Blog"). Chunks from the
+    same document share one label; when several different documents share a type,
+    they are numbered to stay distinguishable ("Blog 1", "Blog 2").
+    """
+    docs_by_type: Dict[str, List[str]] = {}
+    for c in chunks:
+        st = c.get("source_type") or "source"
+        dn = c.get("doc_name", "")
+        docs_by_type.setdefault(st, [])
+        if dn not in docs_by_type[st]:
+            docs_by_type[st].append(dn)
+
+    labels: Dict[str, str] = {}
+    for st, docs in docs_by_type.items():
+        base = st.capitalize()
+        for i, dn in enumerate(docs, 1):
+            labels[dn] = base if len(docs) == 1 else f"{base} {i}"
+    return labels
+
+
+def _format_context(chunks: List[Dict], labels: Dict[str, str]) -> str:
+    """Render retrieved chunks as passages tagged with their source-name label."""
     blocks = []
-    for i, c in enumerate(chunks, 1):
-        label = c.get("title") or c.get("doc_name") or "unknown source"
-        blocks.append(
-            f"[{i}] (source: {label} — {c.get('source_type', 'unknown')})\n"
-            f"{c['text']}"
-        )
+    for c in chunks:
+        label = labels[c.get("doc_name", "")]
+        title = c.get("title") or c.get("doc_name") or "unknown source"
+        blocks.append(f"[{label}] ({title})\n{c['text']}")
     return "\n\n".join(blocks)
 
 
-def _build_sources(chunks: List[Dict]) -> str:
+def _build_sources(chunks: List[Dict], labels: Dict[str, str]) -> str:
     """
     Build the Sources section in code from chunk metadata.
 
     This is the programmatic attribution guarantee: it is produced from the actual
-    retrieved chunks, not from anything the LLM wrote, and it maps 1:1 to the [n]
-    labels in the context the model saw.
+    retrieved chunks, not from anything the LLM wrote, and it uses the same source
+    labels the model was told to cite. One line per distinct source document.
     """
-    lines = ["", "---", "**Sources** (retrieved passages this answer is grounded in):"]
-    for i, c in enumerate(chunks, 1):
-        label = c.get("title") or c.get("doc_name") or "unknown source"
+    lines = ["", "---", "**Sources** (this answer is grounded only in these):"]
+    seen = set()
+    for c in chunks:
+        dn = c.get("doc_name", "")
+        if dn in seen:
+            continue
+        seen.add(dn)
+        label = labels[dn]
+        title = c.get("title") or dn or "unknown source"
         url = c.get("source_url", "")
         url_part = f" — {url}" if url else ""
-        lines.append(
-            f"{i}. {label} "
-            f"[{c.get('source_type', 'unknown')}, chunk #{c.get('chunk_index', '?')}, "
-            f"similarity {c.get('similarity', 0):.3f}]{url_part}"
-        )
+        lines.append(f"- **[{label}]** {title}{url_part}")
     return "\n".join(lines)
 
 
@@ -114,10 +138,12 @@ def generate_response(query: str, k: int = N_RESULTS) -> Tuple[str, List[Dict]]:
         return REFUSAL, chunks
 
     # --- Grounded generation ---------------------------------------------------
+    labels = _source_labels(chunks)
     user_message = (
         f"Question: {query}\n\n"
-        f"Context passages:\n\n{_format_context(chunks)}\n\n"
-        f"Answer the question using ONLY the passages above, citing them by number."
+        f"Context passages:\n\n{_format_context(chunks, labels)}\n\n"
+        f"Answer the question using ONLY the passages above, citing them by their "
+        f"bracketed source label."
     )
 
     completion = _client().chat.completions.create(
@@ -131,7 +157,7 @@ def generate_response(query: str, k: int = N_RESULTS) -> Tuple[str, List[Dict]]:
     answer = completion.choices[0].message.content.strip()
 
     # Source attribution is appended by code — guaranteed regardless of the LLM.
-    return answer + "\n" + _build_sources(chunks), chunks
+    return answer + "\n" + _build_sources(chunks, labels), chunks
 
 
 # --- Gradio interface -------------------------------------------------------
