@@ -208,7 +208,7 @@ graph LR
 
 **Milestone 5 — Generation and interface:**
 
-**Tool:** GitHub Copilot
+**Tool:** GitHub Copilot/Claude Code
 
 **Input:**
 - Architecture diagram (Generation stage)
