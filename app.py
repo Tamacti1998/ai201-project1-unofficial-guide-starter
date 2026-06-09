@@ -37,11 +37,7 @@ GROQ_MODEL = "llama-3.3-70b-versatile"   # per planning.md Generation stage
 # this floor mainly rejects off-topic queries. Tunable after seeing real results.
 MIN_SIMILARITY = 0.35
 
-REFUSAL = (
-    "I don't have information about that in my sources. This guide only covers "
-    "what students and blogs have said about organic chemistry difficulty, study "
-    "strategies, and experiences. Try rephrasing your question around that topic."
-)
+REFUSAL = "I don't have enough information on that."
 
 SYSTEM_PROMPT = """You are the Unofficial Guide to organic chemistry, answering \
 strictly from real student discussions and blog posts.
@@ -49,8 +45,8 @@ strictly from real student discussions and blog posts.
 GROUNDING RULES (non-negotiable):
 - Answer ONLY using the numbered context passages provided in the user message.
 - Do NOT use any outside or prior knowledge, even if you are confident.
-- If the context does not contain enough information to answer, say so plainly \
-and do not guess.
+- If the context does not contain enough information to answer, reply exactly: \
+"I don't have enough information on that." Do not guess.
 - Cite the passages you use inline with their bracketed numbers, e.g. [1], [3].
 - When sources disagree, present both perspectives instead of merging them.
 - Be concise and specific; quote or paraphrase the actual student/blog voices."""
