@@ -76,6 +76,8 @@ def embed_and_store(chunks: List[Dict]) -> int:
         documents=texts,
         metadatas=[
             {
+                "doc_name": c.get("doc_name", ""),       # source document name (for attribution)
+                "chunk_index": c.get("chunk_index", -1),  # chunk's position within that document
                 "title": c.get("title", ""),
                 "source_url": c.get("source_url", ""),
                 "source_type": c.get("source_type", ""),
@@ -114,6 +116,8 @@ def retrieve(query: str, k: int = N_RESULTS) -> List[Dict]:
     ):
         hits.append({
             "text": doc,
+            "doc_name": meta.get("doc_name", ""),
+            "chunk_index": meta.get("chunk_index", -1),
             "title": meta.get("title", ""),
             "source_url": meta.get("source_url", ""),
             "source_type": meta.get("source_type", ""),

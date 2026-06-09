@@ -124,7 +124,7 @@ def chunk_document(text: str, doc_id: str, chunk_size: int = 300,
         metadata: Extra fields (e.g. title, source_type) merged into every chunk
 
     Returns:
-        List of dicts: {text, chunk_id, **metadata}
+        List of dicts: {text, chunk_id, doc_name, chunk_index, **metadata}
     """
     metadata = metadata or {}
 
@@ -139,6 +139,8 @@ def chunk_document(text: str, doc_id: str, chunk_size: int = 300,
         return {
             'text': chunk_text,
             'chunk_id': f"{doc_id}_{chunk_id}",
+            'doc_name': doc_id,          # source document name (the .txt filename stem)
+            'chunk_index': chunk_id,     # 0-based position of this chunk within the document
             **metadata,
         }
 
