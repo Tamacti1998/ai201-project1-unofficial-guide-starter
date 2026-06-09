@@ -190,6 +190,16 @@ def _respond(message: str, history: List[Dict]) -> Tuple[List[Dict], str]:
     return history, ""   # clear the input box
 
 
+def _undo(history: List[Dict]) -> List[Dict]:
+    """Remove the last question/answer exchange (the trailing user+assistant pair)."""
+    return history[:-2] if history else history
+
+
+def _reset() -> Tuple[List[Dict], str]:
+    """Clear the whole conversation and the input box for a fresh start."""
+    return [], ""
+
+
 def build_interface() -> gr.Blocks:
     with gr.Blocks(title="The Unofficial Guide — Organic Chemistry") as demo:
         gr.Markdown(
@@ -212,10 +222,16 @@ def build_interface() -> gr.Blocks:
             )
             send_btn = gr.Button("Send", variant="primary", scale=1)
 
+        with gr.Row():
+            undo_btn = gr.Button("↩ Undo last")
+            reset_btn = gr.Button("🗑 Reset conversation")
+
         gr.Examples(examples=EXAMPLE_QUESTIONS, inputs=query_box)
 
         send_btn.click(fn=_respond, inputs=[query_box, chatbot], outputs=[chatbot, query_box])
         query_box.submit(fn=_respond, inputs=[query_box, chatbot], outputs=[chatbot, query_box])
+        undo_btn.click(fn=_undo, inputs=chatbot, outputs=chatbot)
+        reset_btn.click(fn=_reset, inputs=None, outputs=[chatbot, query_box])
 
     return demo
 
