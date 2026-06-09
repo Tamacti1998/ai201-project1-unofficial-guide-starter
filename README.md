@@ -92,7 +92,17 @@ If cost weren't a constraint, I'd move to all-mpnet-base-v2 (768-dim) or a domai
 
 **System prompt grounding instruction:**
 
+Grounding is enforced at three layers, not just requested in the prompt:
+
+1. **System prompt (the instruction).** The model is told, as non-negotiable rules: "Answer ONLY using the numbered context passages provided in the user message. Do NOT use any outside or prior knowledge, even if you are confident. Do NOT speculate, infer, or connect ideas the passages do not explicitly connect… If the context does not address the question, reply exactly: 'I don't have enough information on that.'" It is also told to present disagreements between sources separately rather than merging them.
+
+2. **A pre-generation relevance gate (structural).** Before the LLM is ever called, retrieval results are checked against `MIN_SIMILARITY = 0.35`. If no retrieved chunk clears that cosine-similarity floor, the system returns a fixed refusal and skips generation entirely — so the model cannot answer off-topic queries from its own parametric knowledge. Retrieved chunks are formatted as numbered, source-labeled passages, and generation runs at `temperature=0.2` to keep output close to the context.
+
+3. **Result.** In testing, this combination produced safe refusals (rather than hallucinations) whenever retrieval failed to surface relevant chunks — see the Q3/Q4 results in the Evaluation Report.
+
 **How source attribution is surfaced in the response:**
+
+Attribution does not depend on the LLM remembering to cite. The model is instructed to cite inline with bracketed source labels (e.g. `[Reddit]`, `[Blog 2]`), but the authoritative **Sources** section is built *programmatically in Python* (`_build_sources()`) from the retrieved chunks' metadata — title, source type, and URL — and appended to every grounded answer unconditionally. The labels are generated in code (`_source_labels()`): each distinct source document gets one label derived from its type, with numeric suffixes when several documents share a type (`Blog 1`, `Blog 2`) so citations stay unambiguous. Because the source list is constructed from the actual retrieved metadata rather than the model's output, attribution is guaranteed even if the model miscites or omits its inline tags.
 
 ---
 
