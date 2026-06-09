@@ -173,9 +173,21 @@ EXAMPLE_QUESTIONS = [
 ]
 
 
-def _chat_fn(query: str) -> str:
-    answer, _ = generate_response(query)
-    return answer
+def _respond(message: str, history: List[Dict]) -> Tuple[List[Dict], str]:
+    """Append the user's question and the grounded answer to the chat history.
+
+    Uses Gradio's 'messages' format, so the user's question renders on the right
+    and the assistant's grounded response on the left, with newest below.
+    """
+    message = (message or "").strip()
+    if not message:
+        return history, ""
+    answer, _ = generate_response(message)
+    history = history + [
+        {"role": "user", "content": message},
+        {"role": "assistant", "content": answer},
+    ]
+    return history, ""   # clear the input box
 
 
 def build_interface() -> gr.Blocks:
@@ -186,18 +198,24 @@ def build_interface() -> gr.Blocks:
             "Every answer lists the exact sources it was built from. If the sources "
             "don't cover your question, the guide will say so rather than guess."
         )
-        query_box = gr.Textbox(
-            label="Your question",
-            placeholder="e.g. Why do students find organic chemistry so hard?",
-            lines=2,
-        )
-        ask_btn = gr.Button("Ask", variant="primary")
-        answer_box = gr.Markdown(label="Answer")
+
+        # Conversation area: user messages align right, answers align left.
+        chatbot = gr.Chatbot(height=460, label="Conversation")
+
+        # Input sits below the conversation.
+        with gr.Row():
+            query_box = gr.Textbox(
+                placeholder="e.g. Why do students find organic chemistry so hard?",
+                show_label=False,
+                scale=8,
+                lines=1,
+            )
+            send_btn = gr.Button("Send", variant="primary", scale=1)
 
         gr.Examples(examples=EXAMPLE_QUESTIONS, inputs=query_box)
 
-        ask_btn.click(fn=_chat_fn, inputs=query_box, outputs=answer_box)
-        query_box.submit(fn=_chat_fn, inputs=query_box, outputs=answer_box)
+        send_btn.click(fn=_respond, inputs=[query_box, chatbot], outputs=[chatbot, query_box])
+        query_box.submit(fn=_respond, inputs=[query_box, chatbot], outputs=[chatbot, query_box])
 
     return demo
 
