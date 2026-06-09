@@ -102,16 +102,20 @@ If cost weren't a constraint, I'd move to all-mpnet-base-v2 (768-dim) or a domai
      Be honest — a partially accurate or inaccurate result that you explain well is more
      valuable than a suspiciously perfect result. -->
 
+_Run on llama-3.3-70b-versatile (Groq), top-k=5, MIN_SIMILARITY=0.35. Responses below are summarized; each live response also appended a programmatic source list with inline `[Reddit]`/`[Blog]` citations._
+
 | # | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
 |---|----------|-----------------|------------------------------|-------------------|-------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | What specific reasons do students mention for finding organic chemistry difficult? | ≥3 of: 3D structure visualization, heavy memorization, abstract concepts/mechanisms, ineffective/fast teaching, spatial reasoning, high workload. | Gave 3 grounded reasons: high volume of memorization, constant integration of old + new knowledge (flexibility over rote rules), and the jump to *implicitly* applying atom/group properties. Cited [Blog] + [Reddit]. | Relevant | **Accurate** — meets the ≥3 bar with traceable reasons, though narrower than the full list (no 3D/spatial or teaching points surfaced). |
+| 2 | What study strategies do successful students recommend to improve performance in organic chemistry? | ≥2 specific, actionable approaches: model kits, practice problems, tutoring/better instructors, conceptual understanding, study groups, 3D viz. | Recommended spacing out studying, doing many practice problems, and keeping up with material as taught (cited [Blog 2]). Honestly flagged that a "five evidence-based strategies" passage was truncated and didn't list specifics. | Relevant | **Accurate** — surfaces ≥2 concrete, actionable strategies; correctly notes what the context omits. |
+| 3 | What specific examples do students give of expectations not matching their actual experience? | ≥1 concrete mismatch (e.g. expected pure memorization but needed conceptual thinking; feared failing but succeeded). | Refused: "I don't have enough information on that." Retrieved chunks covered general difficulty/nomenclature but no expectation-vs-reality anecdotes. | Off-target | **Inaccurate** — expected content exists in the corpus but was not retrieved; system safely refused rather than hallucinating. |
+| 4 | What emotional challenges do students specifically name about their organic chemistry experience? | ≥2 of: test anxiety, frustration, fear of failure, workload stress, imposter syndrome, peer-discouragement — with emotional language. | Surfaced "intense", "daunting", and students switching majors due to difficulty, but concluded the passages don't name specific emotions and refused. | Partially relevant | **Partially accurate** — touches emotional-adjacent language but doesn't clearly land ≥2 named emotional challenges; ends in refusal. |
+| 5 | What determines how hard organic chemistry feels: the course itself or the instructor? | Consensus that instructor quality matters more than content alone; specific examples (same course, different professors) or quotes. | Presented both sides: [Reddit 1] "instructor-dependent" vs [Reddit 2] course content is inherently hard ("infinite amount of content"). Did not declare which dominates. | Partially relevant | **Partially accurate** — correctly extracts both factors but doesn't land the "instructor matters more" consensus or a same-course/different-professor example. |
 
 **Retrieval quality:** Relevant / Partially relevant / Off-target  
 **Response accuracy:** Accurate / Partially accurate / Inaccurate
+
+**Summary:** 2 Accurate, 2 Partially accurate, 1 Inaccurate. The two strong results (Q1, Q2) had on-target retrieval; the three weaker results (Q3–Q5) all trace to **retrieval gaps**, not generation faults — the system never hallucinated, it either refused (Q3, Q4) or under-committed (Q5) when the right chunks weren't retrieved.
 
 ---
 
