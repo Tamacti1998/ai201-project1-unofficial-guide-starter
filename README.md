@@ -74,10 +74,10 @@ Reddit comments and blog paragraphs naturally fit this range. Large enough to ca
      latency, and local vs. API-hosted. -->
 
 **Model used:**
-all-mpnet-base-v2 (via sentence-transformers). Better context length (384 tokens vs 256 for all-MiniLM-L6-v2) and superior semantic understanding for nuanced student opinions.
+all-MiniLM-L6-v2 (via sentence-transformers), 384-dim. Fast and lightweight (~80MB), with strong general-purpose semantic quality that handles short student opinions well — most of my chunks are ~270 characters, comfortably under the model's 256-token window, so its shorter context length isn't a constraint here.
 
 **Production tradeoff reflection:**
-If cost were unlimited, I'd use a domain-specialized embedding model fine-tuned on education forums + Reddit discussions. Tradeoffs: context length (for capturing full Reddit threads) > latency (users expect answers in <2s) > multilingual support (not needed for US college students). Domain-specific accuracy is critical — "hard," "struggle," "stressful" have specific meanings in college chemistry contexts that general embeddings miss.
+If cost weren't a constraint, I'd move to all-mpnet-base-v2 (768-dim) or a domain-specialized model fine-tuned on education forums + Reddit discussions. Tradeoffs I'd weigh: accuracy on domain-specific text (mpnet captures more nuance — "hard," "struggle," "stressful" carry specific meaning in a chemistry context that a general model can blur) and context length (for embedding longer Reddit comments intact), against latency (mpnet is meaningfully slower) and download/serving cost. Multilingual support isn't needed for US college students. For this corpus of short, English opinions, MiniLM's speed/size win out; for a production system, I'd accept the latency hit for mpnet's accuracy.
 
 ---
 
